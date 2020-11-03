@@ -27,9 +27,6 @@ class GitHubClient(RestClient):
     def __enter__(self):
         return self
 
-    def __exit__(self, *args):
-        super().__exit__(*args)
-
     @property
     def username(self) -> str:
         return self._session.auth.username
